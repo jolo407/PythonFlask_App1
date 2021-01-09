@@ -21,8 +21,16 @@ def about_me():
     my_dictionary["hobbies"] = "Playing video games"
     return my_dictionary
 
-    @app.route("/aboutme2")
-    def about_me_html():
-        first_name = "Joel"
-        last_name = "Otero"
-        hobbies = "Playing video games"
+@app.route("/aboutme2")
+def about_me_html():
+    first_name = "Joel"
+    last_name = "Otero"
+    hobbies = "Play video games"
+    about_me = """<h1>First name: %s; <br>
+                    Last name: %s; <br>
+                    Hobbies: %s</h1>""" % (
+                        first_name,
+                        last_name,
+                        hobbies)
+    return about_me
+                    
